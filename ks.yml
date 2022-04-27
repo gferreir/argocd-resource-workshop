@@ -1,0 +1,19 @@
+apiVersion: app.kiegroup.org/v2
+kind: KieApp
+metadata:
+  name: workshop
+spec:
+  truststore:
+    openshiftCaBundle: true
+  commonConfig:
+    adminPassword: admin
+    adminUser: admin
+  environment: rhpam-production-immutable
+  objects:
+    servers:
+      - build:
+          gitSource:
+            reference: master
+            uri: 'https://github.com/gferreir/final_project_rhpam'
+        database:
+          type: h2
