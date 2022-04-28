@@ -19,7 +19,7 @@ spec:
             value: >-
               http://nexusrepo-sonatype-nexus-service-labs-infra.apps.cluster-6j7kf.6j7kf.sandbox175.opentlc.com/repository/maven-public/
           - name: KIE_SERVER_CONTAINER_DEPLOYMENT
-            value: 'introduction_dmn=com.myspace:Introduction_DMN:1.0.0'
+            value: 'introduction_dmn=com.myspace:Introduction_DMN:1.0.0|finalized_project=com.myspace:Finalized_Project:1.0.1'
           - name: PROMETHEUS_SERVER_EXT_DISABLED
             value: 'false'
         deployments: 1
