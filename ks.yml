@@ -11,9 +11,14 @@ spec:
   environment: rhpam-production-immutable
   objects:
     servers:
-      - build:
-          gitSource:
-            reference: master
-            uri: 'https://github.com/gferreir/final_project_rhpam'
+      - env:
+          - name: MAVEN_REPO_URL
+            value: >-
+              http://nexusrepo-sonatype-nexus-service-labs-infra.apps.cluster-6j7kf.6j7kf.sandbox175.opentlc.com/repository/maven-public/
+          - name: MAVEN_MIRROR_URL
+            value: >-
+              http://nexusrepo-sonatype-nexus-service-labs-infra.apps.cluster-6j7kf.6j7kf.sandbox175.opentlc.com/repository/maven-public/
+          - name: KIE_SERVER_CONTAINER_DEPLOYMENT
+            value: 'finalized_project=com.myspace:Finalized_Project:1.0.1'
         database:
           type: h2
