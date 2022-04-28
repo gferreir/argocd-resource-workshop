@@ -11,6 +11,7 @@ spec:
   environment: rhpam-production-immutable
   objects:
     servers:
+      - replicas: 1
       - env:
           - name: MAVEN_REPO_URL
             value: >-
